@@ -1,7 +1,3 @@
-/*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
-
-*/
 package cmd
 
 import (
@@ -10,16 +6,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// eatCmd represents the eat command
 var eatCmd = &cobra.Command{
-	Use:   "eat",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:     "eat",
+	Aliases: []string{"delete", "e", "del", "rm", "remove"},
+	Short:   "eat (remove/delete) a crumb",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("eat called")
 	},
@@ -27,14 +17,4 @@ to quickly create a Cobra application.`,
 
 func init() {
 	rootCmd.AddCommand(eatCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// eatCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// eatCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
