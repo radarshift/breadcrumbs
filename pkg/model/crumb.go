@@ -11,6 +11,7 @@ const (
 	Directory
 )
 
+// Determines what kind of location a Crumb points to, either a File or a Directory
 type Location struct {
 	Kind Kind
 	Path string
